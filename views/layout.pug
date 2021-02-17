@@ -1,0 +1,27 @@
+html(lang="eng")
+    head
+        meta(charset="UTF-8")
+        title WeatherApp
+        link(href="/css/style.css" rel="stylesheet")
+        link(href="/img/weathericon.png" rel="icon")
+
+    body
+        div(id="background")
+            div(id="topbar")
+                h1 #{title}
+            div(id="topbarRight")
+                div(class="section")
+                    h1 
+                        a(href="/") home
+                div(class="section")
+                    h1
+                        a(href="/about") about
+                div(class="section")
+                    h1
+                        a(href="/help") help
+            div(id="name")
+                h1 #{name}
+            div(id="bottom")
+                h1 Bottom
+            block content
+        script(src="/js/app.js")
