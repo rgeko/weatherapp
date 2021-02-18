@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (e) => {
     
     //EXTRACT WHATEVER VALUE IS IN THE SEARCH FIELD WHEN I PRESS THE SEARCH BUTTON
     const location = search.value
-    fetch('http://localhost:3000/weather?location=' + location).then((response) => {
+    fetch('/weather?location=' + location).then((response) => {
     response.json().then(({error, location, forecast} = {}) => {
         if(error) {
             p1.textContent = 'Error: ' + error

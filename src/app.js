@@ -9,6 +9,9 @@ const express = require('express')
 //CREATE A NEW EXPRESS APPLICATION
 const app = express()
 
+//DEFINE PORT FOR HEROKU OR LOCAL PORT
+const port = process.env.PORT || 3000
+
 //=====================================STATIC FOLDERS
 //DEFINE PATH TO PUBLIC FOLDER FOR STATIC PAGES
 const publicPath = path.join(__dirname, '../public')
@@ -93,7 +96,7 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000')
+app.listen(port, () => {
+    console.log('Listening on port ' + port)
 })
 
